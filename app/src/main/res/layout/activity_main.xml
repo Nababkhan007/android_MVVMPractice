@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="person"
+            type="com.example.mvvmpractice.Person" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,49 +18,23 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/firstNameTvId"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter first name"
-            android:imeOptions="actionNext"
-            android:inputType="text"
-            tools:ignore="Autofill,HardcodedText" />
-
-        <EditText
-            android:id="@+id/lastNameTvId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter last name"
-            android:imeOptions="actionNext"
-            android:inputType="text"
-            tools:ignore="Autofill,HardcodedText" />
-
-        <EditText
-            android:id="@+id/phoneNumberTvId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter phone number"
-            android:imeOptions="actionDone"
-            android:inputType="phone"
-            tools:ignore="Autofill,HardcodedText" />
-
-        <Button
-            android:id="@+id/showTextBtnId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Show"
-            tools:ignore="HardcodedText" />
+            android:gravity="center"
+            android:text="@{person.personName}" />
 
         <TextView
-            android:id="@+id/showDetailsTvId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="18sp"
-            android:layout_marginRight="10dp"/>
+            android:gravity="center"
+            android:text="@{String.valueOf(person.personAge)}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{person.personAddress}" />
 
     </LinearLayout>
 
