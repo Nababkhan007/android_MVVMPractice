@@ -17,9 +17,15 @@ public class MainActivity extends AppCompatActivity {
 
         setData();
 
+        onClick();
+
+    }
+
+    private void onClick() {
+        activityMainBinding.setEventHandler(new EventHandler());
     }
 
     private void setData() {
-        activityMainBinding.setPerson(new Person("Khan Shaheb", 23, "Dhaka"));
+        activityMainBinding.setPerson(new Person("Khan Shaheb", 26, "Dhaka"));
     }
 }

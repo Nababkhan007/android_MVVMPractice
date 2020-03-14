@@ -8,6 +8,10 @@
         <variable
             name="person"
             type="com.example.mvvmpractice.Person" />
+
+        <variable
+            name="eventHandler"
+            type="com.example.mvvmpractice.EventHandler" />
     </data>
 
     <LinearLayout
@@ -35,6 +39,34 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@{person.personAddress}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> eventHandler.handleClick1(view, context)}"
+            android:text="Click1"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> eventHandler.handleClick2(context, person.personName)}"
+            android:text="Click2"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> eventHandler.handleClick3(context, String.valueOf(person.personAge))}"
+            android:text="Click3"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> eventHandler.handleClick4(context, person.personAddress)}"
+            android:text="Click4"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
