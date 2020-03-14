@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MVVMPractice</string>
+    <string name="personName">Person name</string>
+    <string name="personAddress">Person address</string>
 </resources>

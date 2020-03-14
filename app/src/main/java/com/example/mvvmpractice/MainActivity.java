@@ -26,6 +26,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setData() {
-        activityMainBinding.setPerson(new Person("Khan Shaheb", 26, "Dhaka"));
+        activityMainBinding.setPerson(new Person(null, 26, "Dhaka"));
     }
 }
