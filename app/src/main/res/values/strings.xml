@@ -2,4 +2,5 @@
     <string name="app_name">MVVMPractice</string>
     <string name="personName">Person name</string>
     <string name="personAddress">Person address</string>
+    <string name="personInfo">%1$s is %2$d years old!</string>
 </resources>

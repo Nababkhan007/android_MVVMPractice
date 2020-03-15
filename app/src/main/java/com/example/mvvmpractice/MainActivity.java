@@ -7,6 +7,11 @@ import androidx.databinding.DataBindingUtil;
 
 import com.example.mvvmpractice.databinding.ActivityMainBinding;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding activityMainBinding;
 
@@ -19,6 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
         onClick();
 
+        Person khan = new Person("Khan", 23, "Mirpur");
+        List<Person> personList = new ArrayList<>();
+        personList.add(khan);
+
+        Map<String, Integer> personMap = new HashMap<>();
+        personMap.put(khan.getPersonName(), khan.getPersonAge());
+
+        activityMainBinding.setPersons(personList);
+        activityMainBinding.setPersonMap(personMap);
     }
 
     private void onClick() {

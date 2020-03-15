@@ -5,6 +5,12 @@
 
     <data>
 
+        <import type="java.util.List" />
+
+        <import type="java.util.Map" />
+
+        <import type="com.example.mvvmpractice.Person" />
+
         <variable
             name="person"
             type="com.example.mvvmpractice.Person" />
@@ -12,6 +18,14 @@
         <variable
             name="eventHandler"
             type="com.example.mvvmpractice.EventHandler" />
+
+        <variable
+            name="persons"
+            type="List&lt;Person&gt;" />
+
+        <variable
+            name="personMap"
+            type="Map&lt;String, Integer&gt;" />
     </data>
 
     <LinearLayout
@@ -21,6 +35,30 @@
         android:gravity="center"
         android:orientation="vertical"
         tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{persons[0].personName}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{String.valueOf(personMap[persons[0].personName])}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{@string/personInfo(persons[0].personName, persons[0].personAge)}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{person.personName == null ? `Person Name` : person.personName}" />
 
         <TextView
             android:layout_width="match_parent"
